@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00dbe7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="inner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1324;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#151b2d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Shield Outer -->
+  <path d="M256 32 L448 112 L448 272 C448 384 352 464 256 496 C160 464 64 384 64 272 L64 112 Z" fill="url(#shield-grad)" filter="url(#glow)"/>
+  <!-- Shield Inner -->
+  <path d="M256 64 L424 132 L424 268 C424 368 336 440 256 468 C176 440 88 368 88 268 L88 132 Z" fill="url(#inner-grad)"/>
+  <!-- AI Eye / Sentinel Symbol -->
+  <circle cx="256" cy="240" r="64" fill="none" stroke="#00dbe7" stroke-width="6" opacity="0.6"/>
+  <circle cx="256" cy="240" r="40" fill="none" stroke="#00dbe7" stroke-width="4" opacity="0.8"/>
+  <circle cx="256" cy="240" r="16" fill="#00dbe7"/>
+  <!-- Scan Lines -->
+  <line x1="192" y1="240" x2="140" y2="240" stroke="#00dbe7" stroke-width="3" opacity="0.5"/>
+  <line x1="320" y1="240" x2="372" y2="240" stroke="#00dbe7" stroke-width="3" opacity="0.5"/>
+  <line x1="256" y1="176" x2="256" y2="136" stroke="#00dbe7" stroke-width="3" opacity="0.5"/>
+  <line x1="256" y1="304" x2="256" y2="344" stroke="#00dbe7" stroke-width="3" opacity="0.5"/>
+  <!-- Corner Brackets -->
+  <path d="M180 180 L180 160 L200 160" fill="none" stroke="#14b8a6" stroke-width="3" opacity="0.7"/>
+  <path d="M332 180 L332 160 L312 160" fill="none" stroke="#14b8a6" stroke-width="3" opacity="0.7"/>
+  <path d="M180 300 L180 320 L200 320" fill="none" stroke="#14b8a6" stroke-width="3" opacity="0.7"/>
+  <path d="M332 300 L332 320 L312 320" fill="none" stroke="#14b8a6" stroke-width="3" opacity="0.7"/>
+  <!-- "A" Letter -->
+  <text x="256" y="400" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#00dbe7" opacity="0.9">APOLLO</text>
+</svg>

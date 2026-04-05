@@ -22,8 +22,24 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Apollo Sentinel | DeFi Risk Management",
-  description: "AI-powered JIT rescue system for DeFi positions on HashKey Chain",
+  title: "Apollo Sentinel | AI-Powered DeFi Risk Management",
+  description:
+    "AI-powered JIT rescue system for DeFi positions on HashKey Chain. Prevents destructive liquidations through ZKID-verified creditworthiness.",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Apollo Sentinel — Fair DeFi on HashKey Chain",
+    description:
+      "AI-powered JIT rescue system that prevents destructive liquidations through ZKID-verified creditworthiness.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apollo Sentinel — Fair DeFi on HashKey Chain",
+    description:
+      "AI-powered JIT rescue system that prevents destructive liquidations.",
+  },
 };
 
 export default function RootLayout({

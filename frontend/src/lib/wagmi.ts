@@ -1,1 +1,1 @@
-export { config, hardhatLocal, testnetChain } from "./wagmiConfig";
+export { config, testnetChain } from "./wagmiConfig";

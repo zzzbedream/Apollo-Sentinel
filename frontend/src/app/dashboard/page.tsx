@@ -819,11 +819,11 @@ function RiskEngineSection({ healthFactor, hasZKID }: { healthFactor: number; ha
 // Side Navigation Item Component
 function SideNavItem({ icon, label, active = false, onClick }: { icon: string; label: string; active?: boolean; onClick: () => void }) {
   const iconMap: { [key: string]: string } = {
-    terminal: '▣',
-    account_balance: '🏦',
-    fingerprint: '🔐',
-    receipt_long: '📋',
-    security: '🛡',
+    terminal: '⌘',
+    account_balance: '◈',
+    fingerprint: '◉',
+    receipt_long: '≡',
+    security: '△',
   };
 
   return (
