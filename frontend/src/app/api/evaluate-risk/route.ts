@@ -232,9 +232,19 @@ export async function POST(request: Request) {
 
     // Check if it's a contract revert
     if (errorMessage.includes("revert") || errorMessage.includes("execution reverted")) {
+      // Decode known custom error selectors for better UX
+      let friendlyMessage = "Contract execution reverted";
+      if (errorMessage.includes("0xbb55fd27")) {
+        friendlyMessage = "Rescue Vault has insufficient USDT liquidity. A liquidity provider must deposit funds before rescues can execute.";
+      } else if (errorMessage.includes("0x2d0d7136")) {
+        friendlyMessage = "Only the AI Oracle can execute decisions on-chain.";
+      } else if (errorMessage.includes("0xe6c4247b")) {
+        friendlyMessage = "Invalid amount — must be greater than zero.";
+      }
+
       return NextResponse.json(
         {
-          error: "Contract execution reverted",
+          error: friendlyMessage,
           details: errorMessage,
         },
         { status: 422 }
