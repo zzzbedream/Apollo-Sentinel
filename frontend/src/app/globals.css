@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* APOLLO Sentinel Design System Colors */
+  --surface: #0c1324;
+  --surface-container-lowest: #070d1f;
+  --surface-container-low: #151b2d;
+  --surface-container: #191f31;
+  --surface-container-high: #23293c;
+  --surface-container-highest: #2e3447;
+  --on-surface: #dce1fb;
+  --on-surface-variant: #bbc9cd;
+  --outline-variant: #3c494c;
+  
+  --primary: #00dbe7;
+  --primary-container: #00acb5;
+  --on-primary: #00363a;
+  
+  --secondary: #b4c5ff;
+  --secondary-container: #0053db;
+  
+  --tertiary: #00e639;
+  --tertiary-container: #00b42b;
+  
+  --error: #ffb4ab;
+  --error-container: #93000a;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-error: var(--error);
+  --color-error-container: var(--error-container);
+  --font-sans: 'Inter', sans-serif;
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+body {
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline), 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(21, 27, 45, 0.7);
+  backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: rgba(46, 52, 71, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 219, 231, 0.08) 0%, transparent 60%);
+}
+
+/* Liquid Crystal Gradient for CTAs */
+.liquid-crystal-gradient {
+  background: linear-gradient(135deg, #00dbe7 0%, #00acb5 100%);
+}
+
+/* Cursor Blink Animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-container);
+  border-radius: 10px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 219, 231, 0.3);
+}
